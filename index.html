@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/main.js"></script>
     <title>김해관광포털</title>
 </head>
 <body>
@@ -35,7 +41,7 @@
             </div>
             <div class="main-header">
                 <div class="wrapper flex">
-                    <h1 class="logo"><a href="#"><img src="images/logo.png"></a></h1>
+                    <h1 class="logo"><a href="index.html"><img src="images/logo.png"></a></h1>
                     <div class="search">
                         <label>
                             <select>
@@ -83,24 +89,31 @@
         <main>
             <section class="visual">
                 <div class="visual-swiper">
-
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide bg1"></div>
+                        <div class="swiper-slide bg2"></div>
+                        <div class="swiper-slide bg3"></div>
+                    </div>
+                    <div class="visual-paging"></div>
+                    <div class="visual-prev"><span><i class="material-symbols-rounded">chevron_left</i></span></div>
+                    <div class="visual-next"><span><i class="material-symbols-rounded">chevron_right</i></span></div>
                 </div>
             </section>
             <section class="food">
-                <div class="wrapper">
+                <div class="wrapper position">
                     <h2>김해의 '맛'에 빠지다!</h2>
                     <div class="food-swiper">
-                        <div class="swiper-wrapper"></div>
-                        <div class="food-prev"><span><i class="material-symbols-rounded">chevron_left</i></span></div>
-                        <div class="food-next"><span><i class="material-symbols-rounded">chevron_right</i></span></div>
+                        <div class="swiper-wrapper food-box"></div>
                     </div>
+                    <div class="food-prev"><span><i class="material-symbols-rounded">chevron_left</i></span></div>
+                    <div class="food-next"><span><i class="material-symbols-rounded">chevron_right</i></span></div>
                 </div>
             </section>
             <section class="tour">
                 <div class="wrapper">
                     <h2>힐링 되는 색다른 여행지</h2>
                     <div class="tour-swiper">
-                        <div class="swiper-wrapper"></div>
+                        <div class="swiper-wrapper tour-box"></div>
                         <div class="controll">
                             <div class="tour-paging"></div>
                             <div class="tour-prev"><span><i class="material-symbols-rounded">chevron_left</i></span></div>
@@ -155,37 +168,28 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <ul>
-                                    <li><a href="#n">삶의 질을 추구하는 국제슬로시티 김해</a></li>
+                                    <li><a href="#n">삶의 질을 추구하는 국제슬로시티</a></li>
                                     <li><a href="#n">유니세프 아동친화도시</a></li>
                                     <li><a href="#n">근로복지공단</a></li>
                                     <li><a href="#n">정부24</a></li>
-                                    <li><a href="#n">근로복지공단</a></li>
-                                    <li><a href="#n">위기상황 생활안전정보</a></li>
-                                    <li><a href="#n">경매정보</a></li>
                                 </ul>
                             </div>
                             <div class="swiper-slide">
                                 <ul>
-                                    <li><a href="#n">삶의 질을 추구하는 국제슬로시티 김해</a></li>
-                                    <li><a href="#n">유니세프 아동친화도시</a></li>
-                                    <li><a href="#n">근로복지공단</a></li>
-                                    <li><a href="#n">정부24</a></li>
-                                    <li><a href="#n">근로복지공단</a></li>
-                                    <li><a href="#n">위기상황 생활안전정보</a></li>
-                                    <li><a href="#n">경매정보</a></li>
+                                    <li><a href="#n">청탁금지법·행동강령 위반 신고</a></li>
+                                    <li><a href="#n">부동산거래질서교란행위 신고센터</a></li>
+                                    <li><a href="#n">국민생각함(국민정책참여플랫폼)</a></li>
+                                    <li><a href="#n">자동차365</a></li>
                                 </ul>
                             </div>
                             <div class="swiper-slide">
                                 <ul>
-                                    <li><a href="#n">삶의 질을 추구하는 국제슬로시티 김해</a></li>
-                                    <li><a href="#n">유니세프 아동친화도시</a></li>
-                                    <li><a href="#n">근로복지공단</a></li>
-                                    <li><a href="#n">정부24</a></li>
-                                    <li><a href="#n">근로복지공단</a></li>
-                                    <li><a href="#n">위기상황 생활안전정보</a></li>
-                                    <li><a href="#n">경매정보</a></li>
+                                    <li><a href="#n">경남장애인기업생산품</a></li>
+                                    <li><a href="#n">경상남도 스마트 공장 보급 확산</a></li>
+                                    <li><a href="#n">경남 나누미</a></li>
+                                    <li><a href="#n">스마트쉼센터</a></li>
                                 </ul>
-                            </div>
+                            </div>                            
                         </div>
                     </div>
                 </div>
@@ -194,31 +198,50 @@
                 <div class="wrapper flex">
                     <div class="sitebox">
                         <a href="#n">부서/사업소</a>
-                        <ul class="sub"><li><a href="#n">부서/사업소</a></li></ul>
+                        <ul class="sub">
+                            <li><a href="#n">소통공보관</a></li>
+                            <li><a href="#n">인구청년정책관</a></li>
+                            <li><a href="#n">감사관</a></li>
+                        </ul>
                     </div>
                     <div class="sitebox">
                         <a href="#n">읍면동</a>
-                        <ul class="sub"><li><a href="#n">읍면동</a></li></ul>
+                        <ul class="sub">
+                            <li><a href="#n">장유1동</a></li>
+                            <li><a href="#n">장유2동</a></li>
+                            <li><a href="#n">장유3동</a></li>
+                        </ul>
                     </div>
                     <div class="sitebox">
                         <a href="#n">유관기관</a>
-                        <ul class="sub"><li><a href="#n">유관기관</a></li></ul>
+                        <ul class="sub">
+                            <li><a href="#n">김해중부경찰서</a></li>
+                            <li><a href="#n">김해서부경찰서</a></li>
+                            <li><a href="#n">김해동부소방서</a></li>
+                        </ul>
                     </div>
                     <div class="sitebox">
                         <a href="#n">도내지방자치단체</a>
-                        <ul class="sub"><li><a href="#n">도내지방자치단체</a></li></ul>
+                        <ul class="sub">
+                            <li><a href="#n">경상남도</a></li>
+                            <li><a href="#n">창원시</a></li>
+                            <li><a href="#n">진주시</a></li>
+                        </ul>
                     </div>
                     <div class="sitebox">
                         <a href="#n">김해시관련</a>
-                        <ul class="sub"><li><a href="#n">김해시관련</a></li></ul>
+                        <ul class="sub">
+                            <li><a href="#n">1 평생학습관</a></li>
+                            <li><a href="#n">2 공공예약포털</a></li>
+                            <li><a href="#n">3 국립김해박물관</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="footer">
-                <div class="wrapper">
+                <div class="wrapper position">
                     <div class="top-btn">
                         <span class="ico"><i class="material-symbols-rounded">north</i></span>
-                        <span class="txt">TOP</span>
                     </div>
                     <ul class="foot-nav">
                         <li><a href="#n" class="bold">개인정보처리방침</a></li>

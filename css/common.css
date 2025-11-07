@@ -25,6 +25,7 @@ header .top-menu .flex .left a,
     color: #FFF;
     padding: 0 10px;
     text-align: center;
+    transition: 0.3s all;
 }
 
 header .top-menu .flex .left a {
@@ -35,6 +36,10 @@ header .top-menu .flex .left a {
 header .top-menu .flex .left a.red {
     background-color: #ba2129;
     font-weight: 600;
+}
+
+header .top-menu .flex .left a:hover {
+    background-color: rgba(255,255,255,0.1);
 }
 
 header .top-menu .flex .right a:first-of-type {
@@ -53,6 +58,8 @@ header .top-menu .flex .right a:first-of-type::after {
 header .main-header .flex {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
 }
 
 header .main-header .flex .logo a {
@@ -103,4 +110,307 @@ header .main-header .flex .search label button span {
 
 header .main-header .flex .search label button span i {
     font-size: 30px;
+}
+
+header .main-header .flex .search .search-option {
+    border: 3px solid #006bb7;
+}
+
+header .main-header .flex .sns {
+    display: flex;
+    gap: 10px;
+}
+
+header .main-header .flex .sns a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header .main-header .flex .sns a.sns-blog {
+    background-image: url(../images/sns_blog.png);
+}
+
+header .main-header .flex .sns a.sns-facebook {
+    background-image: url(../images/sns_facebook.png);
+}
+
+header .main-header .flex .sns a.sns-kakao {
+    background-image: url(../images/sns_kakaostory.png);
+}
+
+header .main-header .flex .sns a.sns-insta {
+    background-image: url(../images/sns_instagram.png);
+}
+
+header .main-header .flex .sns a.sns-festival {
+    background-image: url(../images/festival.png);
+    width: 190px;
+}
+
+header .main-menu {
+    background-color: #0170e0;
+}
+
+header .main-menu .flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .main-menu .flex .left {
+    display: flex;
+}
+
+header .main-menu .flex .left a {
+    display: block;
+    color: #FFF;
+    line-height: 55px;
+    padding: 0 20px;
+    font-size: 18px;
+    transition: 0.3s all;
+}
+
+header .main-menu .flex .left a:hover {
+    background-color: #006bb7;
+}
+
+header .main-menu .flex .left button {
+    background-color: #006bb7;
+    padding: 0 20px;    
+    transition: 0.3s all;
+}
+header .main-menu .flex .left button:hover {
+    background-color: #006bb7;
+}
+
+header .main-menu .flex .left button span {
+    color: #FFF;
+    display: flex;
+    align-items: center;
+}
+
+header .main-menu .flex .right {
+    display: flex;
+}
+
+header .main-menu .flex .right a {
+    display: block;
+    color: #FFF;
+    font-size: 18px;
+    line-height: 55px;
+    padding: 0 20px;
+    transition: 0.3s all;
+}
+
+header .main-menu .flex .right a.yellow {
+    background-color: #e3c316;
+}
+
+header .main-menu .flex .right a:hover {
+    background-color: #006bb7;
+}
+
+/* footer */
+
+footer .policy {
+    border-top: 1px solid #EDEDED;
+}
+
+footer .policy .flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+footer .policy .flex h2 {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    width: 217px;
+    text-align: center;
+}
+
+footer .policy .flex h2::after {
+    position: absolute;
+    right: -16px;
+    top: -16px;
+    width: 1px;
+    height: 60px;
+    background-color: #EDEDED;
+    content: "";
+}
+
+footer .policy .policy-swiper {
+    height: 60px;
+    overflow: hidden;
+}
+
+footer .policy .policy-swiper .swiper-slide ul {
+    display: flex;
+    gap: 30px;
+}
+
+footer .policy .policy-swiper .swiper-slide ul li a {
+    position: relative;
+    display: block;
+    line-height: 60px;
+}
+
+footer .policy .policy-swiper .swiper-slide ul li a::after {
+    position: absolute;
+    right: -16px;
+    top: 20px;
+    width: 1px;
+    height: 20px;
+    background-color: #EDEDED;
+    content: "";
+}
+
+footer .policy .policy-swiper .swiper-slide ul li:last-of-type a::after {
+    display: none;
+}
+
+footer .familysite {
+    background-color: #333;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+footer .familysite .flex {
+    display: flex;
+}
+
+footer .familysite .flex .sitebox {
+    position: relative;
+    width: 20%;
+    border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+footer .familysite .flex .sitebox:last-of-type {
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+footer .familysite .flex .sitebox > a {
+    display: block;
+    width: 100%;
+    line-height: 52px;
+    color: #FFF;
+    text-align: center;
+}
+
+footer .familysite .flex .sitebox .sub {
+    position: absolute;
+    left: 0;
+    top: 52px;
+    width: 100%;
+    background-color: #555;
+    transition: 0.3s all;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+}
+
+footer .familysite .flex .sitebox .sub li a {
+    display: block;
+    line-height: 40px;
+    padding: 0 10px;
+    color: #FFF;
+    border-bottom: 1px dashed rgba(255,255,255,0.1);
+    transition: 0.3s all;
+}
+
+footer .familysite .flex .sitebox .sub li:last-of-type a {
+    border-bottom: none;
+}
+
+footer .familysite .flex .sitebox .sub li a:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+footer .familysite .flex .sitebox .sub.on {
+    opacity: 1;
+    visibility: visible;
+}
+
+footer .footer {
+    background-color: #333;
+}
+
+footer .footer .position {
+    position: relative;
+}
+
+footer .footer .position .top-btn {
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+
+footer .footer .position .top-btn .ico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #0170e0;
+    color: #FFF;
+    cursor: pointer;
+    webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+     user-select: none;
+}
+
+footer .footer .position .foot-nav {
+    padding-top: 30px;
+    display: flex;
+    gap: 30px;
+}
+
+footer .footer .position .foot-nav li {
+    position: relative;
+}
+
+footer .footer .position .foot-nav li::after {
+    position: absolute;
+    right: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 60%;
+    background-color: rgba(255,255,255,0.3);
+    content: "";
+}
+
+footer .footer .position .foot-nav li:last-of-type:after {
+    display: none;
+}
+
+footer .footer .position .foot-nav li a {
+    display: block;
+    color: #eee;
+    font-size: 14px;
+}
+
+footer .footer .position .foot-nav li a.bold {
+    font-weight: 700;
+}
+
+footer .footer .position .foot-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 30px;
+    color: #eee;
+    font-size: 15px;
+}
+
+footer .footer .position .copyright {
+    margin-top: 20px;
+    color: #eee;
+    font-size: 14px;
+    padding-bottom: 50px;
 }

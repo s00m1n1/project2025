@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sub.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/pagination.js"></script>
+    <script src="js/data-load.js"></script>
+    <title>김해관광포털</title>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="top-menu">
+                <div class="wrapper flex">
+                    <div class="left">
+                        <a href="#n">시정포털</a>
+                        <a href="#n" class="red">관광포털</a>
+                        <a href="#n">분야포털</a>
+                        <a href="#n">공공예약포털</a>
+                        <a href="#n">주민자치포털</a>
+                        <a href="#n">기업119</a>
+                        <a href="#n">일자리지원센터</a>
+                        <a href="#n">김해시의회</a>
+                        <a href="#n">공공데이터</a>
+                        <a href="#n">스마트도시</a>
+                        <a href="#n">교통정보</a>
+                        <a href="#n">국가상징</a>
+                    </div>
+                    <div class="right">
+                        <a href="#n">홈</a>
+                        <a href="#n">누리집 안내</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-header">
+                <div class="wrapper flex">
+                    <h1 class="logo"><a href="index.html"><img src="images/logo.png"></a></h1>
+                    <div class="search">
+                        <label>
+                            <select>
+                                <option>통합검색</option>
+                                <option>여행지</option>
+                                <option>음식점</option>
+                            </select>
+                            <input type="text" placeholder="검색어를 입력해주세요.">
+                            <button><span><i class="material-symbols-rounded">search</i></span></button>
+                        </label>
+                        <select class="search-option">
+                            <option>여행자맞춤검색</option>
+                        </select>
+                    </div>
+                    <div class="sns">
+                        <a href="https://blog.naver.com/ghhamohamo" target="_blank" class="sns-blog"></a>
+                        <a href="https://www.facebook.com/romanticgimhae/" target="_blank" class="sns-facebook"></a>
+                        <a href="https://story.kakao.com/ch/gimhae" target="_blank" class="sns-kakao"></a>
+                        <a href="https://www.instagram.com/gimhae_tour/" target="_blank" class="sns-insta"></a>
+                        <a href="https://festa.gyeongnam.go.kr/index.do?siteCd=001" target="_blank" class="sns-festival"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-menu">
+                <div class="wrapper flex">
+                    <div class="left">
+                        <a href="intro.html">소개</a>
+                        <a href="festival.html">축제</a>
+                        <a href="tour.html">여행지</a>
+                        <a href="heritage.html">문화유산</a>
+                        <a href="food.html">음식</a>
+                        <a href="accommodation.html">숙박</a>
+                        <button class="more"><span><i class="material-symbols-rounded">menu</i></span></button>
+                    </div>
+                    <div class="right">
+                        <a href="#n">관광지도</a>
+                        <a href="#n">주변대중교통</a>
+                        <a href="#n">정보센터</a>
+                        <a href="#n">사이트맵</a>
+                        <a href="#n" class="yellow">스마트관광</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="visual">
+                <h2 class="tit">여행지</h2>
+            </div>
+            <div class="tit-sns">
+                <div class="wrapper flex">
+                    <h3>김해의 여행지</h3>
+                    <div class="sns-share">
+                        <button><img src="images/bn1blog@2x.png" alt="B"></button>
+                        <button><img src="images/bn1facebook@2x.png" alt="F"></button>
+                        <button><img src="images/bn1twitter@2x.png" alt="T"></button>
+                        <button><img src="images/bn1kakaotalk@2x.png" alt="K"></button>
+                        <button><img src="images/bn1pdf@2x.png" alt="P"></button>
+                        <button><img src="images/bn1link@2x.png" alt="A"></button>
+                        <button><img src="images/bn1print.png" alt="S"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="content festival">
+                <div class="wrapper">
+                    <div class="controller">
+                        <div class="list-controls">
+                            <p class="count" id="content-count"></p>
+                            <form class="sort-area">
+                                <label for="category">
+                                    <span>여행지 분류</span>
+                                    <select name="category" id="category" onchange="categoryOnChange(this.value)">
+                                        <option value="전체" selected="">전체</option>
+                                    </select>
+                                </label>
+                                <label for="limitSize">
+                                    <span>한눈에 보고 싶은 갯수</span>
+                                    <select name="limitSize" id="limitSize" onchange="limitSizeOnChange(this.value)">
+                                        <option value="5">5</option>
+                                        <option value="10" selected="">10</option>
+                                        <option value="20">20</option>
+                                    </select>
+                                </label>
+                                <label for="pagingSize">
+                                    <span>페이지 갯수</span>
+                                    <select name="pagingSize" id="pagingSize" onchange="pagingSizeOnChange(this.value)" readonly="">
+                                        <option value="5" selected="">5</option>
+                                    </select>
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="filter-option">
+                        <ul>
+                            <li>추천순</li>
+                            <li>가나다순</li>
+                            <li>평점순</li>
+                        </ul>
+                    </div>
+                    <div class="pagination">
+                        <div class="content-item-list" id="data-list"></div>
+                        <div class="pagination-section">
+                            <button class="pre-button" id="pre-button"><span><i class="material-symbols-rounded">chevron_left</i></span></button>
+                            <div class="list-pagination"></div>
+                            <button class="next-button" id="next-button"><span><i class="material-symbols-rounded">chevron_right</i></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="policy">
+                <div class="wrapper flex">
+                    <h2>정책정보모음</h2>
+                    <div class="policy-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <ul>
+                                    <li><a href="#n">삶의 질을 추구하는 국제슬로시티</a></li>
+                                    <li><a href="#n">유니세프 아동친화도시</a></li>
+                                    <li><a href="#n">근로복지공단</a></li>
+                                    <li><a href="#n">정부24</a></li>
+                                </ul>
+                            </div>
+                            <div class="swiper-slide">
+                                <ul>
+                                    <li><a href="#n">청탁금지법·행동강령 위반 신고</a></li>
+                                    <li><a href="#n">부동산거래질서교란행위 신고센터</a></li>
+                                    <li><a href="#n">국민생각함(국민정책참여플랫폼)</a></li>
+                                    <li><a href="#n">자동차365</a></li>
+                                </ul>
+                            </div>
+                            <div class="swiper-slide">
+                                <ul>
+                                    <li><a href="#n">경남장애인기업생산품</a></li>
+                                    <li><a href="#n">경상남도 스마트 공장 보급 확산</a></li>
+                                    <li><a href="#n">경남 나누미</a></li>
+                                    <li><a href="#n">스마트쉼센터</a></li>
+                                </ul>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="familysite">
+                <div class="wrapper flex">
+                    <div class="sitebox">
+                        <a href="#n">부서/사업소</a>
+                        <ul class="sub">
+                            <li><a href="#n">소통공보관</a></li>
+                            <li><a href="#n">인구청년정책관</a></li>
+                            <li><a href="#n">감사관</a></li>
+                        </ul>
+                    </div>
+                    <div class="sitebox">
+                        <a href="#n">읍면동</a>
+                        <ul class="sub">
+                            <li><a href="#n">장유1동</a></li>
+                            <li><a href="#n">장유2동</a></li>
+                            <li><a href="#n">장유3동</a></li>
+                        </ul>
+                    </div>
+                    <div class="sitebox">
+                        <a href="#n">유관기관</a>
+                        <ul class="sub">
+                            <li><a href="#n">김해중부경찰서</a></li>
+                            <li><a href="#n">김해서부경찰서</a></li>
+                            <li><a href="#n">김해동부소방서</a></li>
+                        </ul>
+                    </div>
+                    <div class="sitebox">
+                        <a href="#n">도내지방자치단체</a>
+                        <ul class="sub">
+                            <li><a href="#n">경상남도</a></li>
+                            <li><a href="#n">창원시</a></li>
+                            <li><a href="#n">진주시</a></li>
+                        </ul>
+                    </div>
+                    <div class="sitebox">
+                        <a href="#n">김해시관련</a>
+                        <ul class="sub">
+                            <li><a href="#n">1 평생학습관</a></li>
+                            <li><a href="#n">2 공공예약포털</a></li>
+                            <li><a href="#n">3 국립김해박물관</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="wrapper position">
+                    <div class="top-btn">
+                        <span class="ico"><i class="material-symbols-rounded">north</i></span>
+                    </div>
+                    <ul class="foot-nav">
+                        <li><a href="#n" class="bold">개인정보처리방침</a></li>
+                        <li><a href="#n">저작권정책</a></li>
+                        <li><a href="#n">읽기전용 프로그램</a></li>
+                        <li><a href="#n">누리집 안내지도</a></li>
+                        <li><a href="#n">찾아오시는길</a></li>
+                        <li><a href="#n">주차장안내</a></li>
+                        <li><a href="#n">직원업무안내(연락처, 팩스 등)</a></li>
+                    </ul>
+                    <ul class="foot-info">
+                        <li>50924 경상남도 김해시 김해대로 2401(부원동) 김해시청</li>
+                        <li>김해시청 민원콜센터 : 1577-9400(유료), 055-330-3114(유료)</li>
+                        <li>※ 민원콜센터 운영시간 : 평일 09:00~18:00, 토요일, 일요일, 공휴일 및 근무시간 이후는 당직실로 연결됩니다.</li>
+                    </ul>
+                    <p class="copyright">Copyright(c)Gimhae City, All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+      async function init() {
+
+        const requestURL = "http://www.gimhae.go.kr/openapi/tour/tourinfo.do";
+        await apiDataLoad(10, originDatabase, requestURL);
+        const content_count = document.getElementById("content-count");
+        content_count.innerHTML = `총 <span>${originDatabase.length}</span>건의 게시물이 있습니다.`;
+        initDatabase(originDatabase);
+        await pagingRender();
+
+      }
+
+      async function categoryOnChange(value) {
+        alert(`${value}를 선택`);
+
+        database = [];
+
+
+        if (value === "전체") {
+          initDatabase(originDatabase);
+        } else {
+          await CategoryCacheLoad(20, value);
+        }
+        await pagingRender();
+      }
+      async function CategoryCacheLoad(size, category) {
+        for (let i = 0; i < originDatabase.length; i++) {
+          if (originDatabase[i].category.includes(category)) {
+            database.push(originDatabase[i]);
+          }
+        }
+
+        const content_count = document.getElementById("content-count");
+        content_count.innerHTML = `총 <span>${database.length}</span>건의 게시물이 있습니다.`;
+      }
+
+      function createItem(itemCount, data) {
+        const htmlData = `
+            <div class="item-thumbnail">
+                <a href="https://www.gimhae.go.kr/07058/07063/07072.web">
+                    <img src="${data.images[0]}" alt="${data.name}"/>
+                </a>
+            </div>
+            <div class="item-details">
+                <div class="item-title">${itemCount}. ${data.name}</div>
+                <ul class="item-info">
+                  <li><span class="label">주소</span>: ${data.address}</li>
+                  <li><span class="label">관리기관</span>: ${data.name}</li>
+                  <li><span class="label">전화번호</span>: ${data.phone}</li>
+                </ul>
+            </div>
+            <div class="item-ratings">
+                <p class="rating-title">별점 (총 0개의 후기)</p>
+                <div class="stars">☆☆☆☆☆</div>
+                <p class="score">0</p>
+                <div class="add-btn">
+                    <button class="action-btn blue">스크랩하기</button>
+                    <button class="action-btn">길찾기</button>
+                </div>
+            </div>
+
+            `;
+
+        return htmlData;
+      }
+
+      window.onload = init;
+    </script>
+</body>
+</html>
+

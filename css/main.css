@@ -1,0 +1,430 @@
+/* visual */
+.visual {
+    width: 100%;
+    position: relative;
+}
+
+.visual .visual-swiper .swiper-slide {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 720px;
+}
+
+.visual .visual-swiper .swiper-slide.bg1 {
+    background-image: url(../images/main1.jpg);
+}
+
+.visual .visual-swiper .swiper-slide.bg2 {
+    background-image: url(../images/main2.jpg);
+}
+
+.visual .visual-swiper .swiper-slide.bg3 {
+    background-image: url(../images/main3.jpg);
+}
+
+.visual .visual-paging {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    bottom: 30px;
+}
+
+.visual .visual-paging .swiper-pagination-bullet {
+    background-color: #FFF;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    opacity: 0.5;
+    border: 1px solid #EDEDED;
+    transition: 0.3s all;
+}
+
+.visual .visual-paging .swiper-pagination-bullet-active {
+    width: 50px;
+    opacity: 0.7;
+}
+
+.visual .visual-prev,
+.visual .visual-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+     user-select: none;
+}
+
+.visual .visual-prev span,
+.visual .visual-next span {
+    display: flex;
+    align-items: center;
+}
+
+.visual .visual-prev span i,
+.visual .visual-next span i {
+    font-size: 100px;
+    color: #FFF;
+    opacity: 0.5;
+}
+
+.visual .visual-prev {
+    left: 0;
+}
+
+.visual .visual-next {
+    right: 0;
+}
+
+/* food */
+
+.food {
+    padding: 100px 0;
+    position: relative;
+}
+
+.food::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 420px;
+    background: url(../images/food_bg.jpg) no-repeat center center / cover;
+    content: "";
+}
+
+.food h2 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #FFF;
+}
+
+.food .food-swiper {
+    overflow: hidden;
+    padding: 10px;
+}
+
+.food .food-swiper .swiper-slide {
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.food .food-swiper .swiper-slide .image {
+    background-color: #FFF;
+    height: 200px;
+    overflow: hidden;
+}
+
+.food .food-swiper .swiper-slide .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+
+.food .food-swiper .swiper-slide .txt {
+    padding: 20px;
+    height: 150px;
+    background-color: #FFF;
+}
+
+.food .food-swiper .swiper-slide .txt .name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.food .food-swiper .swiper-slide .txt .menu {
+    margin: 5px 0 10px 0;
+}
+
+.food .food-swiper .swiper-slide .txt .add {
+    display: flex;
+    font-size: 14px;
+    color: #777;
+    gap: 5px;
+}
+
+.food .food-swiper .swiper-slide .txt .add span {
+    display: flex;
+    align-items: center;
+    color: #0170e0;
+}
+
+.food .position {
+    position: relative;
+    z-index: 1;
+}
+
+.food .position .food-prev,
+.food .position .food-next {
+    position: absolute;
+    top: 295px;
+    z-index: 100;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+     user-select: none;
+}
+
+.food .position .food-prev span,
+.food .position .food-next span {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s all;
+}
+
+.food .position .food-prev span i,
+.food .position .food-next span i {
+    font-size: 40px;
+    color: #FFF;
+    transition: 0.3s all;
+}
+
+.food .position .food-prev span i {
+    margin-left: -2px;
+}
+
+.food .position .food-next span i {
+    margin-right: -4px;
+}
+
+.food .position .food-prev {
+    left: -60px;
+}
+
+.food .position .food-next {
+    right: -60px;
+}
+
+.food .position .food-prev span:hover,
+.food .position .food-next span:hover {
+    background-color: transparent;
+    border: 1px solid #333;
+
+}
+
+.food .position .food-prev span:hover i,
+.food .position .food-next span:hover i {
+    color: #333;
+}
+
+/* tour */
+
+.tour h2 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tour .tour-swiper {
+    overflow: hidden;
+}
+
+.tour .tour-swiper .swiper-slide .image {
+    background-color: #FFF;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.tour .tour-swiper .swiper-slide .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+
+.tour .tour-swiper .swiper-slide .image .line {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #0170e0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tour .tour-swiper .swiper-slide .image .line span {
+    display: block;
+    width: 15px;
+    height: 2px;
+    background-color: #FFF;
+    position: absolute;
+    transition: 0.3s all;
+}
+.tour .tour-swiper .swiper-slide .image .line span:nth-of-type(1) {
+    transform: rotate(90deg) translateX(-8px);    
+}
+
+.tour .tour-swiper .swiper-slide .image .line span:nth-of-type(2) {
+    width: 35px;
+}
+
+.tour .tour-swiper .swiper-slide .image .line span:nth-of-type(3) {
+    transform: rotate(90deg) translateX(8px);    
+}
+
+.tour .tour-swiper .swiper-slide .image .line:hover span:nth-of-type(1) {
+    transform: rotate(40deg) translate(7px, -12px);
+}
+
+.tour .tour-swiper .swiper-slide .image .line:hover span:nth-of-type(3) {
+    transform: rotate(140deg) translate(-7px, -12px);
+}
+
+.tour .tour-swiper .swiper-slide .txt {
+    margin-top: 20px;
+}
+
+.tour .tour-swiper .swiper-slide .txt .name {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.tour .tour-swiper .controll {
+    padding: 10px 50px;
+    background-color: #EDEDED;
+    border-radius: 30px;
+    width: fit-content;
+    margin: 30px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.tour .tour-swiper .controll .tour-paging {
+    width: fit-content;
+}
+
+
+.tour .tour-swiper .controll .tour-prev,
+.tour .tour-swiper .controll .tour-next {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+     user-select: none;
+}
+
+.tour .tour-swiper .controll .tour-prev span,
+.tour .tour-swiper .controll .tour-next span {
+    display: flex;
+    align-items: center;
+}
+
+
+/* bbs */
+
+.bbs {
+    padding: 100px 0;
+}
+
+.bbs .flex {
+    display: flex;
+    gap: 40px;
+}
+
+.bbs .flex .notice {
+    width: 50%;
+}
+
+.bbs .flex .notice .noti-box {
+    padding: 30px;
+    border: 1px solid #EDEDED;
+}
+
+.bbs .flex .notice .noti-box .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bbs .flex .notice .noti-box .top h2 {
+    font-weight: 600;
+}
+
+.bbs .flex .notice .noti-box .top a {
+    display: block;
+    color:#0170e0
+}
+
+.bbs .flex .notice .noti-box .contain {
+    margin-top: 10px;
+}
+
+.bbs .flex .notice .noti-box .contain a {
+    display: block;
+    line-height: 40px;
+    border-bottom: 1px dashed #eee;
+}
+
+
+.bbs .flex .tour-guide {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.bbs .flex .tour-guide::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    opacity: 0.1;
+    content: "";
+    z-index: 1;
+}
+
+.bbs .flex .tour-guide::after {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.1;
+    content: "";
+    z-index: 1;
+}
+
+.bbs .flex .tour-guide a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: #0170e0;
+    transition: 0.3s all;
+}
+
+.bbs .flex .tour-guide a img {
+    display: block;
+    width: 100px;
+}
+
+.bbs .flex .tour-guide a span {
+    color: #FFF;
+}
+
+.bbs .flex .tour-guide a:hover {
+    background-color: #006bb7;
+}
